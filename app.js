@@ -12,25 +12,23 @@ function toggleSkills() {
     }
 }
 function generateResume() {
-    var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l;
-    // Collect data from the form
+    var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m;
     const name = (_a = document.getElementById('name')) === null || _a === void 0 ? void 0 : _a.value.trim();
     const email = (_b = document.getElementById('email')) === null || _b === void 0 ? void 0 : _b.value.trim();
     const number = (_c = document.getElementById('number')) === null || _c === void 0 ? void 0 : _c.value.trim();
     const city = ((_d = document.querySelector('input[name="city"]:checked')) === null || _d === void 0 ? void 0 : _d.value) || '';
-    const degree = (_e = document.getElementById('degree')) === null || _e === void 0 ? void 0 : _e.value.trim();
-    const university = (_f = document.getElementById('university')) === null || _f === void 0 ? void 0 : _f.value.trim();
-    const graduationDate = (_g = document.getElementById('graduation-date')) === null || _g === void 0 ? void 0 : _g.value;
-    const jobTitle = (_h = document.getElementById('job-title')) === null || _h === void 0 ? void 0 : _h.value.trim();
-    const companyName = (_j = document.getElementById('company-name')) === null || _j === void 0 ? void 0 : _j.value.trim();
-    const startDate = (_k = document.getElementById('start-date')) === null || _k === void 0 ? void 0 : _k.value;
-    const endDate = (_l = document.getElementById('end-date')) === null || _l === void 0 ? void 0 : _l.value;
-    // Validation
+    const Skills = (_e = document.getElementById('Skills')) === null || _e === void 0 ? void 0 : _e.value.trim();
+    const degree = (_f = document.getElementById('degree')) === null || _f === void 0 ? void 0 : _f.value.trim();
+    const university = (_g = document.getElementById('university')) === null || _g === void 0 ? void 0 : _g.value.trim();
+    const graduationDate = (_h = document.getElementById('graduation-date')) === null || _h === void 0 ? void 0 : _h.value;
+    const jobTitle = (_j = document.getElementById('job-title')) === null || _j === void 0 ? void 0 : _j.value.trim();
+    const companyName = (_k = document.getElementById('company-name')) === null || _k === void 0 ? void 0 : _k.value.trim();
+    const startDate = (_l = document.getElementById('start-date')) === null || _l === void 0 ? void 0 : _l.value;
+    const endDate = (_m = document.getElementById('end-date')) === null || _m === void 0 ? void 0 : _m.value;
     if (!name || !email || !number || !city || !degree || !university || !graduationDate || !jobTitle || !companyName || !startDate || !endDate) {
         alert('Please fill in all required fields.');
         return;
     }
-    // Format the data
     const resumeContent = `
         <h1>Resume</h1>
         <h2>Personal Information</h2>
@@ -38,6 +36,9 @@ function generateResume() {
         <p><strong>Email Address:</strong> ${email}</p>
         <p><strong>Contact Number:</strong> ${number}</p>
         <p><strong>City:</strong> ${city}</p>
+
+        <h2>Skills</h2>
+        <p><strong>Skills:</strong> ${Skills}</p>
 
         <h2>Education</h2>
         <p><strong>Degree:</strong> ${degree}</p>
@@ -50,12 +51,10 @@ function generateResume() {
         <p><strong>Start Date:</strong> ${startDate}</p>
         <p><strong>End Date:</strong> ${endDate}</p>
     `;
-    // Display the resume
     const resumeContainer = document.getElementById('resume-content');
     if (resumeContainer) {
         resumeContainer.innerHTML = resumeContent;
     }
-    // Hide the form and show the edit button
     const formContainer = document.getElementById('form-container');
     const editButton = document.getElementById('edit-resume-btn');
     if (formContainer && editButton) {
@@ -64,7 +63,6 @@ function generateResume() {
     }
 }
 function editResume() {
-    // Show the form again
     const formContainer = document.getElementById('form-container');
     const editButton = document.getElementById('edit-resume-btn');
     if (formContainer && editButton) {

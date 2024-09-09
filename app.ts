@@ -16,6 +16,7 @@ function generateResume(): void {
     const email = (document.getElementById('email') as HTMLInputElement)?.value.trim();
     const number = (document.getElementById('number') as HTMLInputElement)?.value.trim();
     const city = (document.querySelector('input[name="city"]:checked') as HTMLInputElement)?.value || '';
+    const Skills = (document.getElementById('Skills') as HTMLInputElement)?.value.trim();
     
     const degree = (document.getElementById('degree') as HTMLInputElement)?.value.trim();
     const university = (document.getElementById('university') as HTMLInputElement)?.value.trim();
@@ -37,6 +38,9 @@ function generateResume(): void {
         <p><strong>Email Address:</strong> ${email}</p>
         <p><strong>Contact Number:</strong> ${number}</p>
         <p><strong>City:</strong> ${city}</p>
+
+        <h2>Skills</h2>
+        <p><strong>Skills:</strong> ${Skills}</p>
 
         <h2>Education</h2>
         <p><strong>Degree:</strong> ${degree}</p>
