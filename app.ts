@@ -1,15 +1,15 @@
 function toggleSkills(): void {
-  const skillsContent = document.getElementById('skills-content') as HTMLElement;
-  const toggleButton = document.querySelector('.toggle-button') as HTMLButtonElement;
-
-  if (skillsContent.style.display === 'none') {
-      skillsContent.style.display = 'block';
-      toggleButton.textContent = 'Hide Skills';
-  } else {
-      skillsContent.style.display = 'none';
-      toggleButton.textContent = 'Show Skills';
+    const skillsContent = document.getElementById('skills-content') as HTMLElement;
+    const toggleButton = document.querySelector('.toggle-button') as HTMLButtonElement;
+  
+    if (skillsContent.style.display === 'none') {
+        skillsContent.style.display = 'block';
+        toggleButton.textContent = 'Hide Skills';
+    } else {
+        skillsContent.style.display = 'none';
+        toggleButton.textContent = 'Show Skills';
+    }
   }
-}
 
 function generateResume(): void {
     const name = (document.getElementById('name') as HTMLInputElement)?.value.trim();
@@ -58,6 +58,9 @@ function generateResume(): void {
     if (resumeContainer) {
         resumeContainer.innerHTML = resumeContent;
     }
+
+    alert("Resume Generated! Check the console for detailed content.");
+    console.log(resumeContent);
 
     const formContainer = document.getElementById('form-container');
     const editButton = document.getElementById('edit-resume-btn');

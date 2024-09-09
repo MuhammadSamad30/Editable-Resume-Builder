@@ -55,6 +55,8 @@ function generateResume() {
     if (resumeContainer) {
         resumeContainer.innerHTML = resumeContent;
     }
+    alert("Resume Generated! Check the console for detailed content.");
+    console.log(resumeContent);
     const formContainer = document.getElementById('form-container');
     const editButton = document.getElementById('edit-resume-btn');
     if (formContainer && editButton) {
