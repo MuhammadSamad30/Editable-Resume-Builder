@@ -26,6 +26,7 @@ body {
 
 h1 span{
     color: #007bff;
+    text-shadow: rgba(62,66,66,0.3) 18px 21px 37px;
 }
 
 h1 {

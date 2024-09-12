@@ -27,11 +27,12 @@ function generateResume(): void {
     const endDate = (document.getElementById('end-date') as HTMLInputElement)?.value;
 
     if (!name || !email || !number || !city || !degree || !university || !graduationDate || !jobTitle || !companyName || !startDate || !endDate) {
-        alert('Please fill in all required fields.');
+        alert('Please fill in all required fields!');
         return;
     }
 
     const resumeContent: string = `
+        <h2>Generated Resume</h2>
         <h1>Resume</h1>
         <h2>Personal Information</h2>
         <p><strong>Full Name:</strong> ${name}</p>
@@ -59,7 +60,7 @@ function generateResume(): void {
         resumeContainer.innerHTML = resumeContent;
     }
 
-    alert("Resume Generated! Check the console for detailed content.");
+    alert("Resume Generated! Your Resume Has Been Generated.");
     console.log(resumeContent);
 
     const formContainer = document.getElementById('form-container');
@@ -76,5 +77,10 @@ function editResume(): void {
     if (formContainer && editButton) {
         formContainer.style.display = 'block';
         editButton.style.display = 'none';
+
+       window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+       })
     }
 }
