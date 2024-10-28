@@ -49,7 +49,7 @@
                         <label for="Skills">List Your Skills:</label>
                         <input type="text" id="Skills" placeholder="Enter your skills separated by commas">
                     </div>
-                    <button onclick="toggleSkills()">Hide Skills</button>
+                    <button class="toggle-button" onclick="toggleSkills()">Hide Skills</button>
                 </section>
             </div>
     
@@ -82,9 +82,13 @@
                     <label for="end-date">End Date:</label>
                     <input type="date" id="end-date" required>
                 </section>
+                
+            <label for="imageUplaod" class="file-upload-label"> Select Your Image
+                <input type="file" name="imageUplaod" id="imageUplaod" accept="image/*" hidden>
+            </label>
             </div>
     
-            <button onclick="generateResume()">Generate Resume</button>
+            <button id="generate-resume-btn" onclick="generateResume()">Generate Resume</button>
         </div>
     
         <div class="container-resume">
