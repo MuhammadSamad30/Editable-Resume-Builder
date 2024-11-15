@@ -134,6 +134,22 @@ input[type="radio"] {
   }
 }
 
+#edit-resume-btn {
+    width: 25%; 
+    padding: 12px;
+    font-size: 1em;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+    &:hover{
+        background-color: #357ab6;
+    }
+}
+
 section {
     margin-bottom: 20px;
 }
